@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update_School</title>
+    <link type="text/css" rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <a href="intro.html">Home</a>
+    <script src="./node_modules/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+
+    <form autocomplete="off" onsubmit="onFormSubmit">
+        <div>
+            <label for="schoolId">schoolId</label>
+            <input type="number" name="schoolId" id="schoolId">  
+        </div>
+        <div>
+            <label for="address">Address</label>
+            <input type="text" name="address" id="address">
+        </div>
+        <div>
+            <label for="capacity">Capacity</label>
+            <input type="number" name="capacity" id="capacity">
+        </div>
+        <div>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name">
+        </div>
+        <div class="form_action--button">
+            <button onclick="updateSchoolTable" style="background-color: aquamarine;">Submit
+        </div>
+        <div class="btn">
+            <input type="reset" />
+        </div>
+        
+    </form>
+    
+</body>
+</html>

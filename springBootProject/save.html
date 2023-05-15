@@ -1,81 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+
+<html>
+    <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add_to_School_Table</title>
-    <link type="text/css" rel="stylesheet" href="style.css">
-</head>
-<body>
-   
+    <title>Create School Form</title>
+    </head>
+    <body>
+    <h1>Create School</h1>
     <a href="intro.html">Home</a>
-    <script src="script.js"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  
+    <form id="createSchoolForm">
+        <label for="id">ID:</label>
+        <input type="text" id="id" name="id" required><br>
 
-    <form id="myform">
-        <div>
-            <label for="schoolId">schoolId</label>
-            <input type="number" name="schoolId" id="schoolId">  
-        </div>
-        <div>
-            <label for="address">Address</label>
-            <input type="text" name="address" id="address">
-        </div>
-        <div>
-            <label for="capacity">Capacity</label>
-            <input type="number" name="capacity" id="capacity">
-        </div>
-        <div>
-            <label for="name">Name</label>
-            <input type="text" name="name" id="name">
-        </div>
-   
-        <div class="form_action--button">
-            <button onclick="axios.post()" style="background-color: aquamarine;">Submit
-        </div>
-        <div class="btn">
-            <input type="reset" />
-        </div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
 
+        <label for="capacity">Capacity:</label>
+        <input type="number" id="capacity" name="capacity" required><br>
+
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required><br>
+
+        <input type="submit" value="Create School">
     </form>
-    <td>
-        <table class="list" id="storeList">
-            <tr>
-                <th>schoolId</th>
-                <th>address</th>
-                <th>capacity</th>
-                <th>name</th>
+    <button id="getTokenButton">Get Token</button>
 
-            </tr>
-        </table>
-    </td>
-    <script type="module">
-  
-        // const form = document.getElementById('form');
-        
-        // form.addEventListener('submit',function(e){
-        //     e.preventDefault();
-
-        //     const formData = new FormData(form);
-        //     console.log([...formData]);
-            
-            
-        //     await.axios.post('http://localhost:8090/school/save',formData)
-             
-
-        //    });
-        //    console.log(response)
-        
-        //     .then(function (response){
-        //         console.lof(response);
-        //     })
-
-
-        //     .catch(err => console.log(err)) -->
-        
-    </script>
-
-</body>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+    </body>
 </html>
